@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit your feedback about faculty and courses.">
+    <title>Submit Feedback — AI Feedback</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">AI Feedback</a>
+            <div class="navbar-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link primary">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEEDBACK FORM -->
+    <section class="form-page">
+        <div class="form-card">
+
+            <!-- Form Content -->
+            <div id="formContent">
+                <div class="form-header">
+                    <div class="form-header-icon">📝</div>
+                    <h2>Submit Feedback</h2>
+                    <p>Share your learning experience with us</p>
+                </div>
+
+                <form id="feedbackForm" novalidate>
+                    <div class="form-group">
+                        <label>Student Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                        <div class="error-msg" id="nameError">Please enter your name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Faculty Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="faculty" name="faculty" placeholder="Enter faculty name" required>
+                        <div class="error-msg" id="facultyError">Please enter faculty name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Course Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="course" name="course" placeholder="Enter course name" required>
+                        <div class="error-msg" id="courseError">Please enter course name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating <span class="required">*</span></label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-value="1" data-tooltip="Poor">★</span>
+                            <span class="star" data-value="2" data-tooltip="Fair">★</span>
+                            <span class="star" data-value="3" data-tooltip="Good">★</span>
+                            <span class="star" data-value="4" data-tooltip="Very Good">★</span>
+                            <span class="star" data-value="5" data-tooltip="Excellent">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                        <div class="error-msg" id="ratingError">Please select a rating</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Comment <span class="required">*</span></label>
+                        <textarea class="form-control" id="comment" name="comment" placeholder="Share your learning experience..." required></textarea>
+                        <div class="error-msg" id="commentError">Comment must be at least 10 characters long</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg" id="submitBtn" style="width: 100%;">
+                        Submit Feedback
+                    </button>
+                </form>
+            </div>
+
+            <!-- Success State -->
+            <div class="form-success" id="successState">
+                <div class="success-icon">✅</div>
+                <h3>Feedback Submitted!</h3>
+                <p>Thank you for sharing your experience. Your feedback helps us improve.</p>
+                <div id="sentimentResult"></div>
+                <a href="feedback.html" class="btn btn-primary" style="margin-top: 8px;">Submit Another</a>
+                <br>
+                <a href="index.html" class="btn btn-secondary" style="margin-top: 12px;">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Powered Digital Feedback System — Collect smarter feedback and discover insights instantly.">
+    <title>AI Feedback — Digital Feedback System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">AI Feedback</a>
+            <div class="navbar-links">
+                <a href="feedback.html" class="nav-link">Submit Feedback</a>
+                <a href="login.html" class="nav-link primary">Admin Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-shapes">
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                AI Powered Platform
+            </div>
+            <h1>AI Powered <span class="gradient-text">Digital Feedback</span> System</h1>
+            <p>Collect smarter feedback and discover insights instantly. Empowering universities with intelligent feedback analysis and beautiful dashboards.</p>
+            <div class="hero-buttons">
+                <a href="feedback.html" class="btn btn-primary btn-lg">
+                    <span class="btn-icon">📝</span>
+                    Submit Feedback
+                </a>
+                <a href="login.html" class="btn btn-secondary btn-lg">
+                    <span class="btn-icon">📊</span>
+                    Admin Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">✨ Features</div>
+                <h2>Everything You Need</h2>
+                <p>A complete feedback management system with intelligent analysis capabilities.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Feedback</h3>
+                    <p>Students can submit feedback instantly through an intuitive, modern interface. Every response is captured and stored securely in the database.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Sentiment Analysis</h3>
+                    <p>Automatic sentiment detection categorizes each feedback as positive, neutral, or negative using intelligent keyword analysis powered by AI.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📈</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Beautiful charts and metrics give administrators a clear overview of feedback trends, ratings, and sentiment distribution at a glance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card animate-on-scroll">
+                <h2>Ready to Transform Your Feedback Process?</h2>
+                <p>Start collecting and analyzing student feedback today with our AI-powered platform.</p>
+                <a href="feedback.html" class="btn btn-lg">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Digital Feedback System. Built for academic excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

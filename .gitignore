@@ -1,0 +1,26 @@
+# Java class files
+*.class
+
+# Log files
+*.log
+
+# Build output
+build/
+out/
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Replay files
+replay_*.log
+hs_err_*.log
